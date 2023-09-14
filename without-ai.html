@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AppInsights test Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h2>Without Application Insights</h2>
+    <p>Both buttons will do a POST</p>
+    <div id="app">
+      <button id="with-url">POST with URL</button>
+      <button id="empty-string">POST with empty string</button>
+    </div>
+
+    <script>
+      document.getElementById("with-url").onclick=function () {
+        fetch('/test', { method: 'POST'})
+      };
+      
+      document.getElementById("empty-string").onclick=function () {
+        fetch('', { method: 'POST'})
+      };
+    </script>
+  </body>
+</html>
